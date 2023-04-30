@@ -29,9 +29,17 @@ menu = """
 [e] Extrato
 [q] Sair
 => """
+menu = """
+
+[d] Depositar
+[s] Sacar
+[e] Extrato
+[q] Sair
+=> """
 saldo = 0
 limite = 500
-extrato = ""
+saque = [] 
+deposito = []
 numero_saque = 0
 LMITE_SAQUE = 3
 
@@ -43,19 +51,26 @@ while True:
         ndeposito=float(input("Digite o valor do deposito!"))
         if ndeposito >0:
             saldo+= ndeposito
-            print(saldo)
+            deposito.append(ndeposito) 
+            extrato= f"Saque de R${saldo:1.2f}"
     elif opcao =="s":
         print("Sacar")
         nSaque=float(input("informe o valor do saque:"))
         if (numero_saque < LMITE_SAQUE) and (nSaque <= limite) and(nSaque <= saldo):
             saldo-=nSaque
+            saque.append(nSaque)
             numero_saque += 1
             extrato= f"Saque de R${nSaque:1.2f}"
             print(extrato)
         else:
             print("Erro na operação!! Limite de saque diário atingido, ou saldo insuficiente!!")
     elif opcao == "e":
-        print("Extrato")
+        print(" Extrato")
+        for i in saque:
+            print(f"Saque de R${i:1.2f}")
+        for i in deposito:
+            print(f"Deposito de R${i:.2f}")
+        print(saldo)
     elif opcao == "q":
          break
     else:
