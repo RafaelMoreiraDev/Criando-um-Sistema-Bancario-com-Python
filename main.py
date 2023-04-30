@@ -38,14 +38,14 @@ LMITE_SAQUE = 3
 while True:
     opcao=input(menu)
     
-    if menu == "d":
+    if opcao == "d":
         print("Deposito")
-    elif menu =="s":
+    elif opcao =="s":
         print("Sacar")
-    elif menu == "e":
+    elif opcao == "e":
         print("Extrato")
-    elif menu == "q":
+    elif opcao == "q":
          break
     else:
-        print("Operação invalida, por favor selwcione uma opção valida!!")
+        print("Operação invalida, por favor selecione uma opção valida!!")
     
