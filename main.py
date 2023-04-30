@@ -70,7 +70,7 @@ while True:
             print(f"Saque de R${i:1.2f}")
         for i in deposito:
             print(f"Deposito de R${i:.2f}")
-        print(saldo)
+        print (f"saldo R${saldo:.2f}")
     elif opcao == "q":
          break
     else:
