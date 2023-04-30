@@ -69,8 +69,13 @@ while True:
         for i in saque:
             print(f"Saque de R${i:1.2f}")
         for i in deposito:
+<<<<<<< HEAD
             print(f"Deposito de R${i:.2f}")
         print (f"Saldo R${saldo:.2f}")
+=======
+            print(f"Deposito de R4{i:.2f}")
+        print(saldo)
+>>>>>>> b205cbf (Adicionado a funçao de ver o extrato utilizando lista)
     elif opcao == "q":
          break
     else:
