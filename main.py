@@ -40,8 +40,20 @@ while True:
     
     if opcao == "d":
         print("Deposito")
+        ndeposito=float(input("Digite o valor do deposito!"))
+        if ndeposito >0:
+            saldo+= ndeposito
+            print(saldo)
     elif opcao =="s":
         print("Sacar")
+        nSaque=float(input("informe o valor do saque:"))
+        if (numero_saque < LMITE_SAQUE) and (nSaque <= limite) and(nSaque <= saldo):
+            saldo-=nSaque
+            numero_saque += 1
+            extrato= f"Saque de R${nSaque:1.2f}"
+            print(extrato)
+        else:
+            print("Erro na operação!! Limite de saque diário atingido, ou saldo insuficiente!!")
     elif opcao == "e":
         print("Extrato")
     elif opcao == "q":
