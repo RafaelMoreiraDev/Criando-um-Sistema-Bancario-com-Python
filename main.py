@@ -50,6 +50,8 @@ while True:
             saldo+= ndeposito
             deposito.append(ndeposito) 
             extrato= f"Saque de R${saldo:1.2f}"
+            print (f"Deposito efetuado com sucesso no valor de R${ndeposito:.2f}")
+            
     elif opcao =="s":
         print("Sacar")
         nSaque=float(input("informe o valor do saque:"))
@@ -62,7 +64,7 @@ while True:
         else:
             print("Erro na operação!! Limite de saque diário atingido, ou saldo insuficiente!!")
     elif opcao == "e":
-        print(" ____Extrato____\n")
+        print("_______Extrato_______\n")
         for i in saque:
             print(f"Saque de R${i:1.2f}")
         for i in deposito:
