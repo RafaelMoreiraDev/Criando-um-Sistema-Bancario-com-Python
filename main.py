@@ -23,14 +23,12 @@
 #1500.45 = R$ 1500.45
 
 menu = """
-
 [d] Depositar
 [s] Sacar
 [e] Extrato
 [q] Sair
 => """
 menu = """
-
 [d] Depositar
 [s] Sacar
 [e] Extrato
@@ -65,9 +63,13 @@ while True:
         else:
             print("Erro na operação!! Limite de saque diário atingido, ou saldo insuficiente!!")
     elif opcao == "e":
-        print("Extrato")
+        print(" Extrato")
+        for i in saque:
+            print(f"Saque de R${i:1.2f}")
+        for i in deposito:
+            print(f"Deposito de R${i:.2f}")
+        print (f"Saldo R${saldo:.2f}")
     elif opcao == "q":
          break
     else:
         print("Operação invalida, por favor selecione uma opção valida!!")
-    
