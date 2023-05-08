@@ -65,17 +65,7 @@ while True:
         else:
             print("Erro na operação!! Limite de saque diário atingido, ou saldo insuficiente!!")
     elif opcao == "e":
-        print(" Extrato")
-        for i in saque:
-            print(f"Saque de R${i:1.2f}")
-        for i in deposito:
-<<<<<<< HEAD
-            print(f"Deposito de R${i:.2f}")
-        print (f"Saldo R${saldo:.2f}")
-=======
-            print(f"Deposito de R4{i:.2f}")
-        print(saldo)
->>>>>>> b205cbf (Adicionado a funçao de ver o extrato utilizando lista)
+        print("Extrato")
     elif opcao == "q":
          break
     else:
