@@ -23,17 +23,16 @@
 #1500.45 = R$ 1500.45
 
 menu = """
-[d] Depositar
-[s] Sacar
-[e] Extrato
-[q] Sair
+ ____BANCO DIGITAL!_____
+|                       |
+|   [d] Depositar       |
+|   [s] Sacar           |
+|   [e] Extrato         |
+|   [q] Sair            |
+|                       |
+# ______________________#
 => """
-menu = """
-[d] Depositar
-[s] Sacar
-[e] Extrato
-[q] Sair
-=> """
+
 saldo = 0
 limite = 500
 saque = [] 
@@ -63,7 +62,7 @@ while True:
         else:
             print("Erro na operação!! Limite de saque diário atingido, ou saldo insuficiente!!")
     elif opcao == "e":
-        print(" Extrato")
+        print(" ____Extrato____\n")
         for i in saque:
             print(f"Saque de R${i:1.2f}")
         for i in deposito:
